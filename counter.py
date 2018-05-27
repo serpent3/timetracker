@@ -8,5 +8,5 @@ with open(log, 'r') as log:
     for i in range(len(l)):
         if float(l[i].split('\n')[0]) - float(l[i].split('\n')[0]) < interval + 1:
             counter += interval
-    print(counter)
+    print(counter/60/60)
   

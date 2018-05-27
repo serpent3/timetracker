@@ -19,9 +19,12 @@ def w():
                              byref(root_x), byref(root_y),
                              byref(win_x), byref(win_y), byref(mask))
     if ret == 0: sys.exit(1)
+    Xlib.XCloseDisplay(display);
     return child_id.value 
 
-this_w = w() # get windows id
+with open ('this_w', 'r') as f:
+    this_w = f.readline()#35076598 #w() # get windows
+#this_w = 35076598
     
 while True:
     time.sleep(interval)
